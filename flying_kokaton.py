@@ -30,7 +30,6 @@ def main():
             
         key_lst = pg.key.get_pressed() #10-3全キーの押下状態を取得
         #print(key_lst)
-        kk_rct.move_ip((-1, 0))
         
         if key_lst[pg.K_UP]: #10-4矢印キーでこうかとんが移動
             y1 = -1
@@ -45,7 +44,7 @@ def main():
         
         sum_y = y1 + y2
         
-        kk_rct.move_ip((0+sum_x, 0+sum_y))
+        kk_rct.move_ip((-1+sum_x, sum_y))
 
         
         screen.blit(bg_img, [-x, 0]) #練習5背景画像を右から左へ
